@@ -7,7 +7,9 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  message: string;
+  //#region Component Attributes
+  message: string; // Welcome message
+  //#endregion
 
   constructor() {
     this.message = environment.homePage.message;

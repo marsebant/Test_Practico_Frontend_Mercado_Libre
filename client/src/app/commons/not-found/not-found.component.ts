@@ -4,12 +4,14 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-not-found',
   templateUrl: './not-found.component.html',
-  styleUrls: ['./not-found.component.css']
+  styleUrls: ['./not-found.component.css'],
 })
 export class NotFoundComponent implements OnInit {
+  //#region Input Attributes
   @Input() message: string;
   @Input() redirectTo: string;
   @Input() redirectMessage: string;
+  //#endregion
 
   constructor() {
     this.message = environment.notFoundPage.message;
@@ -17,7 +19,5 @@ export class NotFoundComponent implements OnInit {
     this.redirectMessage = environment.notFoundPage.redirectMessage;
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

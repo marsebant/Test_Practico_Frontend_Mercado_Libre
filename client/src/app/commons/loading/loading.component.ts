@@ -6,7 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./loading.component.css']
 })
 export class LoadingComponent implements OnInit {
+  //#region Input Attributes
   @Input() loadingMessage: string;
+  //#endregion
 
   constructor() {
     this.loadingMessage = '';

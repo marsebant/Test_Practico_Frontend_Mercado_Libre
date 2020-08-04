@@ -13,7 +13,7 @@ import { Utils } from 'src/app/utils/utils';
   styleUrls: ['./result.component.css'],
 })
 export class ResultComponent implements OnInit {
-  //#region Attributes
+  //#region Component Attributes
   items: ItemList[];
   categories: string[];
   loading: boolean;

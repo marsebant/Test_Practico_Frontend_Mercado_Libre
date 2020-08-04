@@ -10,17 +10,21 @@ import { Utils } from 'src/app/utils/utils';
   styleUrls: ['./search-item.component.css'],
 })
 export class SearchItemComponent implements OnInit {
+  //#region Input Attributes
   @Input() notLast: boolean;
   @Input() item: ItemList;
+  //#endregion
+  //#region Component Attributes
   freeShippingTitle: string;
   freeShippingSrc: string;
   price: string;
   description: string;
+  //#endregion
 
   constructor(private router: Router) {
     this.freeShippingSrc = '../../..' + environment.itemList.freeShippingIconPath;
     this.freeShippingTitle = environment.itemList.freeShippingTitle;
-    this.description = 'Completo Único!';
+    this.description = environment.itemList.subtitle;
   }
 
   ngOnInit(): void {
@@ -28,6 +32,7 @@ export class SearchItemComponent implements OnInit {
   }
 
   onDetail(): void {
+    // Show item details
     this.router.navigate(['/items/', this.item.id]);
   }
 }

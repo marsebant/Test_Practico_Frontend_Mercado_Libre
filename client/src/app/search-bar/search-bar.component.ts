@@ -9,10 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./search-bar.component.css'],
 })
 export class SearchBarComponent implements OnInit {
+  //#region Component Attributes
   logoTitle: string;
   searchButtonTitle: string;
   placeholder: string;
   searchWords: string;
+  //#endregion
 
   constructor(
     private titleService: Title,
@@ -34,7 +36,7 @@ export class SearchBarComponent implements OnInit {
   }
 
   onSearch(): void {
-    // If any key send search words
+    // If any key show results
     if (this.searchWords) {
       this.router.navigate(['/items'], {queryParams: {search: this.searchWords}});
     }

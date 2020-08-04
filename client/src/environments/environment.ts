@@ -35,6 +35,7 @@ export const environment = {
   itemList: {
     freeShippingTitle: 'Envío gratis!',
     freeShippingIconPath: '/assets/ic_shipping@2x.png.png',
+    subtitle: 'Completo Único!',
   },
   itemDetail: {
     descriptionTitle: 'Descripción del producto',

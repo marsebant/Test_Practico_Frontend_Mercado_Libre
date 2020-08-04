@@ -31,13 +31,15 @@ export const environment = {
   itemList: {
     freeShippingTitle: 'Envío gratis!',
     freeShippingIconPath: '/assets/ic_shipping@2x.png.png',
+    subtitle: 'Completo Único!',
   },
   itemDetail: {
     descriptionTitle: 'Descripción del producto',
-    loadingMsg: 'Obteniendo información'
+    loadingMsg: 'Obteniendo información',
+    notFoundMsg: 'No encontramos el ítem al que intentas acceder =\\'
   },
   error: {
-    message: 'Houston! Tenemos un problema :@',
+    message: 'Houston! Tenemos un problema =0',
     redirectURL: '',
     redirectMessage: 'Volver a la página principal',
   }

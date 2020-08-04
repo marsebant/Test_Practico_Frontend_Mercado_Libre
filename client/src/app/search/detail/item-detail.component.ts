@@ -13,6 +13,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./item-detail.component.css'],
 })
 export class ItemDetailComponent implements OnInit {
+  //#region Component Attributes
   itemDetails: Detail;
   categories: string[];
   loadingMsg: string;
@@ -24,6 +25,7 @@ export class ItemDetailComponent implements OnInit {
   notFoundMessage: string;
   redirectOnError: string;
   redirectMessage: string;
+  //#endregion
 
   constructor(
     private apiService: ApiService,
