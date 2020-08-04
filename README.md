@@ -23,8 +23,11 @@ npm start
 ```
 
 El backend está configurado para recibir peticiones en la URL `http://localhost:3000/api`.
+
 En la consola, al final de la ejecución de npm start, se informa la URL donde está atendiendo el API.
+
 Si se desea modificar la configuración, se debe modificar la variable PORT el archivo api/.env. 
+
 Si se modifica el puerto de escucha del API, también debe modificarse con la misma url la variable api.base del archivo client/src/environments/environment.ts.
 
 ### Client
@@ -36,7 +39,9 @@ npm start
 ```
 
 Para acceder al servidor del SPA ingresar a la URL `http://localhost:4200/` (por defecto).
+
 En la consola, al final de la ejecución de npm start, se informa la URL donde está atendiendo el servidor.
+
 Si se desea modificar el puerto de escucha del servidor web ejecutar la siguiente línea
 ```bash
 ng serve --port puerto_elegido
