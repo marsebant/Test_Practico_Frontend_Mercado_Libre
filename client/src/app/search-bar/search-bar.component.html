@@ -1,0 +1,20 @@
+<div class="searchBar">
+  <div title="{{ logoTitle }}" class="logoSearchBar" (click)="onClickLogo()">
+    <img src="../../assets/Logo_ML@2x.png.png" alt="Meli_logo" />
+  </div>
+  <div class="inputSearchBar">
+    <input
+      type="text"
+      placeholder="{{ placeholder }}"
+      [(ngModel)]="searchWords"
+      (keyup.enter)="onSearch()"
+    />
+    <button (click)="onSearch()" title="{{ searchButtonTitle }}">
+      <img
+        class="searchButtonImage"
+        src="../../assets/ic_Search@2x.png.png"
+        alt="lens_img"
+      />
+    </button>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+.searchBar {
+  display: flex;
+  flex: 0 0 70%;
+  align-self: center;
+}
+
+.left .right{
+  width: 15%;
+}
+
+.logoSearchBar {
+  display: flex;
+  flex: 0 0 auto;
+  width: 53px;
+  margin: 13px 20px 13px 0;
+}
+.logoSearchBar, button:hover {
+  cursor: pointer;
+}
+
+.inputSearchBar {
+  display: flex;
+  margin: 13px 0px;
+  width: 100%;
+}
+
+.searchButtonImage {
+  width: 20px;
+}
+
+input {
+  padding-left: 10px;
+  font-size: 17px;
+  width: 100%;
+  border: 1px solid #eeeeee;
+  border-radius: 4px 0 0 4px;
+}
+
+button {
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+  border-radius: 0 4px 4px 0;
+}
+
+img {
+  width: inherit;
+}
+
+::placeholder {
+  color: #999999;
+}

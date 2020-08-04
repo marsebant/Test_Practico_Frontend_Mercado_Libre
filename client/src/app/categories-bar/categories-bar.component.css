@@ -1,0 +1,22 @@
+.container {
+  font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+  color: #999999;
+}
+
+ol.breadcrumb {
+  padding: 0;
+  margin: 16px 0;
+  font-size: 14px;
+  display: -webkit-box;
+  list-style: none;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  margin-left: 7px;
+  font-weight: normal;
+  content: ">";
+}
+
+.breadcrumb .breadcrumb-item:last-child {
+  font-weight: bold;
+}

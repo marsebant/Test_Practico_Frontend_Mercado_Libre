@@ -1,0 +1,37 @@
+<ng-container *ngIf="!loading && !error">
+  <app-categories-bar
+    *ngIf="categories.length && items.length"
+    [categories]="categories"
+  ></app-categories-bar>
+  <div class="container">
+    <div class="search_list" *ngIf="items.length">
+      <app-search-item
+        [notLast]="i + 1 !== items.length"
+        [item]="item"
+        class="search_results"
+        *ngFor="let item of items; let i = index"
+      >
+      </app-search-item>
+    </div>
+    <div *ngIf="!items.length" class="noResults">
+      <div class="message">
+        <h4>{{ noResultsMessage }}</h4>
+      </div>
+      <div class="options">
+        <ul>
+          <li *ngFor="let option of noResultsOptions">{{ option }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="loading && !error">
+  <app-loading [loadingMessage]="loadingMsg"></app-loading>
+</ng-container>
+<ng-container *ngIf="error">
+  <app-not-found
+    [message]="errorMessage"
+    [redirectTo]="redirectOnError"
+    [redirectMessage]="redirectMessage"
+  ></app-not-found>
+</ng-container>

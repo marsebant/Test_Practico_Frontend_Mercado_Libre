@@ -1,0 +1,40 @@
+<ng-container *ngIf="!loading && !error">
+  <app-categories-bar [categories]="categories"></app-categories-bar>
+  <div class="container">
+    <div class="item-detail">
+      <div class="item-img-container">
+        <img class="item-img" src="{{ itemDetails.item.picture }}" alt="Item_Image" >
+      </div>
+      <div class="item-info">
+        <div class="condition-solds">
+          <span>{{itemDetails.item.condition}} - {{itemDetails.item.sold_quantity}} vendidos</span>
+        </div>
+        <div class="title">
+          <span [innerHTML]="itemDetails.item.title"></span>
+        </div>
+        <div class="price">
+          <span class="amount">{{price}}</span>
+        </div>
+        <div class="purchase-item">
+          <button class="purchase-btn" (click)="onPurchase()">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="item-desc">
+      <div class="desc-title">
+        {{descriptionTitle}}
+      </div>
+      <span class="desc-text" [innerText]="itemDetails.item.description"></span>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="loading && !error">
+  <app-loading [loadingMessage]="loadingMsg"></app-loading>
+</ng-container>
+<ng-container *ngIf="error">
+  <app-not-found
+    [message]="errorMessage"
+    [redirectTo]="redirectOnError"
+    [redirectMessage]="redirectMessage"
+  ></app-not-found>
+</ng-container>

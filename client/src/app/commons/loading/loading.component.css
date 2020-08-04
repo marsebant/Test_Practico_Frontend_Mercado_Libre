@@ -1,0 +1,29 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-top: 10%;
+}
+
+@keyframes dots {
+  50% {
+    transform: translateY(-.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.dot {
+  color: #ffe600;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+  width: 10px;
+  margin-left: 5px;
+  animation: dots 0.75s ease-out infinite;
+}
+.dot2 {
+  animation-delay: 0.25s;
+}
+.dot3 {
+  animation-delay: 0.5s;
+}

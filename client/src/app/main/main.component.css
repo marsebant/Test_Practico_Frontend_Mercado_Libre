@@ -1,0 +1,34 @@
+.leftHeader,
+.rightHeader {
+  width: 15%;
+}
+
+.centerHeader {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 70%;
+}
+
+.main_display {
+  display: flex;
+  flex-flow: row nowrap;
+  min-height: 100vh;
+  height: fit-content;
+}
+
+.center {
+  display: flex;
+  flex-flow: column wrap;
+  width: 70%;
+  min-height: 100vh;
+}
+
+.left, .right {
+  display: flex;
+  width: 15%;
+  min-height: 100vh;
+}
+
+footer {
+  height: 5vh;
+}

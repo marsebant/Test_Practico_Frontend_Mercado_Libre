@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="item">
+    <div class="item-image-container">
+      <img class="item-img" src="{{ item.picture }}" alt="Item_Image"  (click)="onDetail()"/>
+    </div>
+    <div class="item-info">
+      <div class="price_location" (click)="onDetail()">
+        <div class="price">
+          <span class="amount">{{price}}</span>
+          <div class="shipping-icon" *ngIf="item.free_shipping">
+            <img class="icon" src="{{ freeShippingSrc }}" alt="free_shipping" title="{{freeShippingTitle}}" />
+          </div>
+        </div>
+        <div class="location">
+          <span>{{ item.state }}</span>
+        </div>
+      </div>
+      <div class="title">
+        <p [innerHTML]="item.title"></p>
+        <p>{{ description }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="divider" *ngIf="notLast">
+    <hr />
+  </div>
+</div>
