@@ -1,10 +1,12 @@
-# Test_Practico_Frontend_Mercado_Libre
+# Test Practico Frontend Mercado Libre
 Test práctico para aspirantes al área de front-end de Mercado Libre.
 
 ## Tecnologías Utilizadas
 
 JavaScript ES6
+
 Frontend: Angular 10, HTML, CSS
+
 Backend: Node.js v10.15.3, Express, dotenv, Axios, Jasmine
 
 ## Despliegue
@@ -13,6 +15,7 @@ Clonar el repositorio git
 ```bash
 git clone https://github.com/marsebant/Test_Practico_Frontend_Mercado_Libre.git
 ```
+Descargar e instalar [node](https://nodejs.org/es/download/)
 
 ### API
 
@@ -48,7 +51,7 @@ ng serve --port puerto_elegido
 ```
 
 ### Testing
-
+Para ejecutar el test, es necesario que el api **no se esté ejecutando**. En caso de que se esté ejecutando, dirigirse a la carpeta del api y presionar *Ctrl+C*
 ```bash
 cd api
 npm test
